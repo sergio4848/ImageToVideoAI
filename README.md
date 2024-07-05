@@ -150,7 +150,7 @@ if __name__ == '__main__':
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/yourusername/image_to_video_creator.git
+git clone [https://github.com/sergio4848/ImageToVideoAI.git]
 cd image_to_video_creator
 ```
 
