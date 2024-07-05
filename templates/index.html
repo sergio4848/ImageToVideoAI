@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #282c34;
+            color: white;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            animation: fadeIn 2s ease-in-out;
+        }
+        form {
+            animation: slideIn 2s ease-in-out;
+        }
+        input[type="file"] {
+            padding: 10px;
+            background: #61dafb;
+            border: none;
+            border-radius: 5px;
+            color: black;
+        }
+        button {
+            padding: 10px 20px;
+            background: #61dafb;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        button:hover {
+            background: #21a1f1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Image to Video</h1>
+        <form action="/create_video" method="post" enctype="multipart/form-data">
+            <label for="images">Select Images:</label><br>
+            <input type="file" id="images" name="images" multiple><br><br>
+            <button type="submit">Create Video</button>
+        </form>
+    </div>
+</body>
+</html>
